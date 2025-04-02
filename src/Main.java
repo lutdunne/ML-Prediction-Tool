@@ -1,6 +1,5 @@
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
+
 
 public class Main {
     public static void main(String[] args) {
@@ -12,7 +11,7 @@ public class Main {
         Female female4 = new Female(true, true, true, true, false);
         Female female5 = new Female(false, false, false, false, false);
 
-        ArrayList<Female> females = new ArrayList<Female>();
+        ArrayList<Female> females = new ArrayList<>();
         females.add(female1);
         females.add(female2);
         females.add(female3);
@@ -27,6 +26,14 @@ public class Main {
         Classifier classifier = new Classifier();
         classifier.countFeaturesFromFemales(females);
         classifier.printFeatureTable();
+        NaiveBayesCalculator calculator = new NaiveBayesCalculator(
+                classifier.isPregnantFeatureToCount,
+                classifier.isNotPregnantFeatureToCount,
+                classifier.getTotalPregnant(),
+                classifier.getTotalNotPregnant()
+        );
+        calculator.calculateProbabilities();
+        System.out.println(calculator.calculateProbabilities());
 //        System.out.println(classifier.isPregnantFeatureToCount.get("Young"));
 
     }

@@ -19,6 +19,14 @@ public class Classifier {
         }
     }
 
+    public int getTotalPregnant() {
+        return totalPregnant;
+    }
+
+    public int getTotalNotPregnant() {
+        return totalNotPregnant;
+    }
+
     public void countFeaturesFromFemales(ArrayList<Female> females) {
         for(Female female : females) {
             boolean isPregnant = female.isPregnant();
