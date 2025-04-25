@@ -1,35 +1,37 @@
 public class Female {
-    private boolean ageIsYoung;
-    private boolean stressLevelLow;
-    private boolean isUnhealthy;
-    private boolean isInactive;
-    private boolean isPregnant; //optional?
+    private String ageGroup;
+    private String stressLevel;
+    private String menstrualPattern;
+    private String morningSickness;
 
-    public Female(boolean ageIsYoung, boolean stressLevelLow, boolean isUnhealthy, boolean isInactive, boolean isPregnant) {
-        this.ageIsYoung = ageIsYoung;
-        this.stressLevelLow = stressLevelLow;
-        this.isUnhealthy = isUnhealthy;
-        this.isInactive = isInactive;
-        this.isPregnant = isPregnant;
+
+    public String getAgeGroup() {
+        return ageGroup;
     }
 
-    public boolean isAgeIsYoung() {
-        return ageIsYoung;
+    public String getMorningSickness() {
+        return morningSickness;
     }
 
-    public boolean isStressLevelLow() {
-        return stressLevelLow;
+    public String getStressLevel() {
+        return stressLevel;
     }
 
-    public boolean isUnhealthy() {
-        return isUnhealthy;
+    public String getMenstrualPattern() {
+        return menstrualPattern;
     }
 
-    public boolean isInactive() {
-        return isInactive;
+
+
+    public Female(String ageGroup, String stressLevel, String menstrualPattern, String morningSickness) {
+        this.ageGroup = ageGroup;
+        this.stressLevel = stressLevel;
+        this.menstrualPattern = menstrualPattern;
+        this.morningSickness = morningSickness;
     }
 
-    public boolean isPregnant() {
-        return isPregnant;
-    }
+
+
+
+
 }
