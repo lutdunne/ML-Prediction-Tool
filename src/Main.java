@@ -39,6 +39,7 @@ public class Main {
 //        System.out.println(calculator.calculateProbabilities());
 ////        System.out.println(classifier.isPregnantFeatureToCount.get("Young"));
 
+
         GUI screen = new GUI();
 
     }

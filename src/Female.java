@@ -22,16 +22,10 @@ public class Female {
     }
 
 
-
     public Female(String ageGroup, String stressLevel, String menstrualPattern, String morningSickness) {
         this.ageGroup = ageGroup;
         this.stressLevel = stressLevel;
         this.menstrualPattern = menstrualPattern;
         this.morningSickness = morningSickness;
     }
-
-
-
-
-
 }

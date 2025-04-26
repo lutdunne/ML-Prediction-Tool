@@ -1,6 +1,7 @@
 import java.util.HashMap;
 import java.util.Map;
 
+
 public class NaiveBayesCalculator {
     private final String[] features = {"Young", "Old", "High Stress", "Low Stress", "Healthy Diet", "Unhealthy Diet", "Active", "Inactive"};
     private int totalPregnant;

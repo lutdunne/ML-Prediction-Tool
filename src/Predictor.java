@@ -1,4 +1,5 @@
 public class Predictor {
+
     public String predict(Female female) {
         if (female.getAgeGroup().equals("Old") &&
                 female.getStressLevel().equals("High") &&
