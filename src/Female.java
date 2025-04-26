@@ -4,7 +4,6 @@ public class Female {
     private String menstrualPattern;
     private String morningSickness;
 
-
     public String getAgeGroup() {
         return ageGroup;
     }
