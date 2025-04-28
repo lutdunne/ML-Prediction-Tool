@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 import java.util.List;
 
 
@@ -26,5 +25,11 @@ public class Main {
     public static String getPrediction(String age, String stress, String menstrual, String sickness) {
         Female female = new Female(age, stress, menstrual, sickness, "Unknown");
         return predictor.predict(female);
+    }
+    public static void saveNewExample(String age, String stress, String menstrual, String sickness, String pregnant) {
+        Female female = new Female(age, stress, menstrual, sickness, pregnant);
+        predictor.updateWithNewExample(female);
+
+        System.out.println("New example added successfully");
     }
 }

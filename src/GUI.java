@@ -1,7 +1,6 @@
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.ArrayList;
 
 public class GUI extends JFrame implements ActionListener {
     JPanel panel1;
@@ -83,7 +82,17 @@ public class GUI extends JFrame implements ActionListener {
             resultLabel.setText(prediction);
         }
 
+        if (e.getSource() == save) {
+            String age = (String) ageGroupBox.getSelectedItem();
+            String stress = (String) stressLevelBox.getSelectedItem();
+            String menstrual = (String) menstrualBox.getSelectedItem();
+            String sickness = (String) sicknessBox.getSelectedItem();
+            String pregnant = (String) pregnantBox.getSelectedItem();
 
+            Main.saveNewExample(age, stress, menstrual, sickness, pregnant);
+
+            JOptionPane.showMessageDialog(null, "New example saved!");
+        }
     }
 }
 

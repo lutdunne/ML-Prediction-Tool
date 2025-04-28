@@ -98,5 +98,29 @@ public class Predictor {
         return probability;
     }
 
+    public void updateWithNewExample(Female female) {
+        System.out.println("Updating with new example...");
 
+        String ageGroup = female.getAgeGroup();
+        String stressLevel = female.getStressLevel();
+        String menstrualPattern = female.getMenstrualPattern();
+        String morningSickness = female.getMorningSickness();
+        String pregnant = female.getPregnant();
+
+        if(pregnant.equals("Yes")) {
+            totalYes++;
+            feature1YesCounts.put(ageGroup, feature1YesCounts.getOrDefault(ageGroup, 0) + 1);
+            feature2YesCounts.put(stressLevel, feature2YesCounts.getOrDefault(stressLevel, 0) + 1);
+            feature3YesCounts.put(menstrualPattern, feature3YesCounts.getOrDefault(menstrualPattern, 0) + 1);
+            feature4YesCounts.put(morningSickness, feature4YesCounts.getOrDefault(morningSickness, 0) + 1);
+        } else if(pregnant.equals("No")) {
+            totalNo++;
+            feature1NoCounts.put(ageGroup, feature1NoCounts.getOrDefault(ageGroup, 0) + 1);
+            feature2NoCounts.put(stressLevel, feature2NoCounts.getOrDefault(stressLevel, 0) + 1);
+            feature3NoCounts.put(menstrualPattern, feature3NoCounts.getOrDefault(menstrualPattern, 0) + 1);
+            feature4NoCounts.put(morningSickness, feature4NoCounts.getOrDefault(morningSickness, 0) + 1);
+        }
+        System.out.println("Total Yes: " + totalYes);
+        System.out.println("Total No: " + totalNo);
+    }
 }
