@@ -5,8 +5,8 @@ import java.util.ArrayList;
 
 public class GUI extends JFrame implements ActionListener {
     JPanel panel1;
-    JButton predict;
-    JComboBox ageGroupBox, stressLevelBox, menstrualBox, sicknessBox;
+    JButton predict, save;
+    JComboBox ageGroupBox, stressLevelBox, menstrualBox, sicknessBox, pregnantBox;
     JLabel ageGroup, stressLevel, menstrualPattern, morningSicknessLevel, resultLabel;
 
     public GUI() {
@@ -16,6 +16,8 @@ public class GUI extends JFrame implements ActionListener {
         String[] stressLevels = {"High", "Low"};
         String[] menstrualPatterns = {"Regular", "Missed"};
         String[] morningSicknessLevels = {"Mild", "Severe"};
+        String[] pregnantOptions = {"Yes", "No"};
+
 
         ageGroup = new JLabel("Age Group");
         stressLevel = new JLabel("Stress Level");
@@ -26,7 +28,9 @@ public class GUI extends JFrame implements ActionListener {
         stressLevelBox = new JComboBox<>(stressLevels);
         menstrualBox = new JComboBox<>(menstrualPatterns);
         sicknessBox = new JComboBox<>(morningSicknessLevels);
+        pregnantBox = new JComboBox<>(pregnantOptions);
 
+        save = new JButton("Save");
 
         predict = new JButton("Predict");
 
@@ -35,7 +39,7 @@ public class GUI extends JFrame implements ActionListener {
         setSize(500, 500);
 
         predict.addActionListener(this);
-//        showall.addActionListener(this);
+        save.addActionListener(this);
 //        delete.addActionListener(this);
 
 
@@ -51,8 +55,12 @@ public class GUI extends JFrame implements ActionListener {
         panel1.add(morningSicknessLevel);
         panel1.add(sicknessBox);
 
+        panel1.add(save);
+
         panel1.add(predict);
         panel1.add(resultLabel);
+
+        panel1.add(pregnantBox);
 
         add(panel1);
 
@@ -69,12 +77,13 @@ public class GUI extends JFrame implements ActionListener {
             String menstrual = (String) menstrualBox.getSelectedItem();
             String sickness = (String) sicknessBox.getSelectedItem();
 
-            Female female = new Female(age, stress, menstrual, sickness);
-            Predictor predictor = new Predictor();
-            String prediction = predictor.predict(female);
+            String prediction = Main.getPrediction(age, stress, menstrual, sickness);
+
 
             resultLabel.setText(prediction);
         }
+
+
     }
 }
 
