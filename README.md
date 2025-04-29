@@ -1,9 +1,11 @@
 # PersonIsPregnant
 This is a prediction tool for the PersonIsPregnant dataset. This dataset is categorical and contains 4 features with 2 possible values for each feature and a single label being "Yes" or "No".
 
+Frequency table:
+
 | Row Labels | No  | Yes | Grand Total |
 |------------|-----|-----|-------------|
-| Old        | 54  | 50  | 104         |
+| **Old**    | 54  | 50  | 104         |
 | High       | 32  | 26  | 58          |
 | Missed     | 13  | 11  | 24          |
 | Mild       | 9   | 9   | 18          |
@@ -61,3 +63,5 @@ Main features:
 ### GUI.java
 This class handles the graphical user interface for the application. It provides dropdowns for the user to input feature values like age group, stress level, menstrual pattern, and morning sickness level. It includes a Predict button to generate a pregnancy prediction and a Save button to add a new example to the model. The prediction result is displayed on the screen. The GUI communicates with the Main class to perform predictions and update the model.
 
+### What I would add if i had more time
+I would improve the system for continuous learninng. When users add new data, it would be added directly to the csv file. Once the data is added, the model could be retrained to improve its predictions and accuracy over time. 
