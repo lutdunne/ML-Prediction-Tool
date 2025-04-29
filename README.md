@@ -1,6 +1,40 @@
 # PersonIsPregnant
 This is a prediction tool for the PersonIsPregnant dataset. This dataset is categorical and contains 4 features with 2 possible values for each feature and a single label being "Yes" or "No".
 
+| Row Labels | No  | Yes | Grand Total |
+|------------|-----|-----|-------------|
+| Old        | 54  | 50  | 104         |
+| High       | 32  | 26  | 58          |
+| Missed     | 13  | 11  | 24          |
+| Mild       | 9   | 9   | 18          |
+| Severe     | 4   | 2   | 6           |
+| Regular    | 19  | 15  | 34          |
+| Mild       | 12  | 6   | 18          |
+| Severe     | 7   | 9   | 16          |
+| Low        | 22  | 24  | 46          |
+| Missed     | 10  | 13  | 23          |
+| Mild       | 3   | 8   | 11          |
+| Severe     | 7   | 5   | 12          |
+| Regular    | 12  | 11  | 23          |
+| Mild       | 5   | 9   | 14          |
+| Severe     | 7   | 2   | 9           |
+| **Young**  | 50  | 46  | 96          |
+| High       | 21  | 23  | 44          |
+| Missed     | 8   | 14  | 22          |
+| Mild       | 3   | 7   | 10          |
+| Severe     | 5   | 7   | 12          |
+| Regular    | 13  | 9   | 22          |
+| Mild       | 8   | 4   | 12          |
+| Severe     | 5   | 5   | 10          |
+| Low        | 29  | 23  | 52          |
+| Missed     | 11  | 12  | 23          |
+| Mild       | 7   | 4   | 11          |
+| Severe     | 4   | 8   | 12          |
+| Regular    | 18  | 11  | 29          |
+| Mild       | 8   | 6   | 14          |
+| Severe     | 10  | 5   | 15          |
+| **Grand Total** | **104** | **96** | **200** |
+
 
 ### Female.java
 Represents a female subject with features such as age group, stress level, menstrual pattern, morning sickness, and pregnancy status. It stores this information for use in model training and prediction.
